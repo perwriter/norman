@@ -5,8 +5,8 @@ import SiteHeader from '@/components/layout/site-header';
 import SiteFooter from '@/components/layout/site-footer';
 
 export const metadata: Metadata = {
-  title: 'Virtuoso Keys',
-  description: 'Learn piano and analyze music with AI.',
+  title: 'Norman Lu - Pianist',
+  description: 'The official portfolio website of Norman Lu, showcasing performances, news, and biography.',
 };
 
 export default function RootLayout({

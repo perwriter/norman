@@ -5,8 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 const navItems = [
   { href: '/', label: 'Home' },
-  { href: '/lessons', label: 'Interactive Lessons' },
-  { href: '/analysis', label: 'Music Analysis' },
+  { href: '/about', label: 'About Me' },
+  { href: '/news', label: 'News & Media' },
+  { href: '/contact', label: 'Contact' },
 ];
 
 export default function SiteHeader() {
@@ -15,7 +16,7 @@ export default function SiteHeader() {
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         <Link href="/" className="flex items-center space-x-2">
           <Music2 className="h-6 w-6 text-primary" />
-          <span className="font-bold text-xl font-headline text-primary">Virtuoso Keys</span>
+          <span className="font-bold text-xl font-headline text-primary">Norman Lu</span>
         </Link>
         
         <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
@@ -42,7 +43,7 @@ export default function SiteHeader() {
               <nav className="grid gap-6 text-lg font-medium mt-8">
                 <Link href="/" className="flex items-center space-x-2 mb-6">
                   <Music2 className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-xl font-headline text-primary">Virtuoso Keys</span>
+                  <span className="font-bold text-xl font-headline text-primary">Norman Lu</span>
                 </Link>
                 {navItems.map((item) => (
                   <Link
