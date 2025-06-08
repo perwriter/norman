@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,7 @@ import { Newspaper, UserCircle, Mic, Send, CalendarDays, Video } from 'lucide-re
 
 function HeroSection() {
   return (
-    <section className="relative h-[calc(100vh-10rem)] min-h-[500px] flex items-center justify-center text-center text-white rounded-lg overflow-hidden shadow-xl -mt-8 -mx-4 sm:-mx-0">
+    <section className="relative h-[calc(100vh-10rem)] min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden shadow-xl -mt-8 w-screen left-1/2 -ml-[50vw]">
       {/* Replace with the actual path to your uploaded image in the /public folder e.g., /images/norman-lu-hero.jpg */}
       <Image
         src="/norman-lu-hero.jpeg" 
