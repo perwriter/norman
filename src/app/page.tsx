@@ -9,7 +9,7 @@ function HeroSection() {
     <section className="relative h-[calc(100vh-10rem)] min-h-[500px] flex items-center justify-center text-center text-white rounded-lg overflow-hidden shadow-xl -mt-8 -mx-4 sm:-mx-0">
       {/* Replace with the actual path to your uploaded image in the /public folder e.g., /images/norman-lu-hero.jpg */}
       <Image
-        src="/images/norman-lu-hero.jpg" 
+        src="/norman-lu-hero.jpeg" 
         alt="Norman Lu performing at the piano"
         layout="fill"
         objectFit="cover"
@@ -71,7 +71,7 @@ export default function HomePage() {
           <div className="md:flex">
             <div className="md:w-1/3">
               <Image 
-                src="https://placehold.co/600x800.png" 
+                src="/norman-lu-hero.jpeg" 
                 alt="Norman Lu portrait" 
                 width={600} 
                 height={800} 
