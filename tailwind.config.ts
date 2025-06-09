@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -110,7 +111,46 @@ export default {
         'fade-in': 'fade-in 0.5s ease-out',
         'slide-in-up': 'slide-in-up 0.5s ease-out forwards',
       },
+      // Added typography for prose styling, if you choose to use @tailwindcss/typography
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.foreground'),
+            a: {
+              color: theme('colors.accent.DEFAULT'),
+              '&:hover': {
+                color: theme('colors.accent.DEFAULT / 0.8'),
+              },
+            },
+            h1: { color: theme('colors.primary.DEFAULT'), fontFamily: theme('fontFamily.headline').join(', ') },
+            h2: { color: theme('colors.primary.DEFAULT'), fontFamily: theme('fontFamily.headline').join(', ') },
+            h3: { color: theme('colors.primary.DEFAULT'), fontFamily: theme('fontFamily.headline').join(', ') },
+            h4: { color: theme('colors.primary.DEFAULT'), fontFamily: theme('fontFamily.headline').join(', ') },
+            strong: { color: theme('colors.foreground') },
+            // Add more styles as needed
+          },
+        },
+        invert: { // For dark mode
+          css: {
+            color: theme('colors.foreground'), // Assuming foreground is adjusted for dark mode
+             a: {
+              color: theme('colors.accent.DEFAULT'), // Adjust if accent needs dark mode variant
+              '&:hover': {
+                color: theme('colors.accent.DEFAULT / 0.8'),
+              },
+            },
+            h1: { color: theme('colors.primary.DEFAULT') }, // Adjust if primary needs dark mode variant
+            h2: { color: theme('colors.primary.DEFAULT') },
+            h3: { color: theme('colors.primary.DEFAULT') },
+            h4: { color: theme('colors.primary.DEFAULT') },
+            strong: { color: theme('colors.foreground') },
+          }
+        }
+      }),
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography') // Added Tailwind Typography plugin
+  ],
 } satisfies Config;

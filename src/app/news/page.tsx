@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,6 +9,7 @@ import { Separator } from '@/components/ui/separator';
 const blogPosts = [
   {
     id: "1",
+    slug: "reflections-on-chopin", // Added slug for dynamic routing
     title: "Reflections on Chopin: A Journey Through Nocturnes",
     date: "October 15, 2024",
     excerpt: "Exploring the emotional depth and technical brilliance of Chopin's Nocturnes, and their enduring appeal to pianists and audiences alike.",
@@ -17,6 +19,7 @@ const blogPosts = [
   },
   {
     id: "2",
+    slug: "art-of-practice", // Added slug
     title: "The Art of Practice: Strategies for Musicians",
     date: "September 28, 2024",
     excerpt: "Insights into effective practice techniques, maintaining motivation, and achieving artistic growth as a performing musician.",
@@ -26,6 +29,7 @@ const blogPosts = [
   },
   {
     id: "3",
+    slug: "carnegie-hall-review", // Added slug
     title: "Concert Review: An Evening at Carnegie Hall",
     date: "August 05, 2024",
     excerpt: "A personal account and review of a recent memorable performance at the legendary Carnegie Hall.",
@@ -68,7 +72,7 @@ export default function NewsPage() {
       <header className="text-center">
         <h1 className="text-5xl font-bold mb-4 text-primary font-headline">News & Media</h1>
         <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-          Stay updated with Norman Lu's latest articles, performances, and media appearances.
+          Stay updated with my latest articles, performances, and media appearances.
         </p>
       </header>
 
@@ -110,12 +114,12 @@ export default function NewsPage() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {videoPerformances.map((video) => (
             <Card key={video.id} className="flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="relative w-full aspect-video">
+              <Link href={video.videoUrl} target="_blank" rel="noopener noreferrer" className="block relative w-full aspect-video group">
                 <Image src={video.thumbnailUrl} alt={video.title} layout="fill" objectFit="cover" data-ai-hint={video.aiHint} />
-                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 hover:opacity-100 transition-opacity">
+                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <PlayCircleIcon className="w-16 h-16 text-white" />
                 </div>
-              </div>
+              </Link>
               <CardHeader>
                 <CardTitle className="text-xl">{video.title}</CardTitle>
               </CardHeader>
@@ -144,14 +148,14 @@ function PlayCircleIcon(props: React.SVGProps<SVGSVGElement>) {
       width="24"
       height="24"
       viewBox="0 0 24 24"
-      fill="none"
+      fill="currentColor" // Changed fill to currentColor to make it solid white
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="1" // Adjusted stroke width
       strokeLinecap="round"
       strokeLinejoin="round"
     >
       <circle cx="12" cy="12" r="10" />
-      <polygon points="10 8 16 12 10 16 10 8" />
+      <polygon points="10 8 16 12 10 16 10 8" fill="var(--background)" /> {/* Polygon fill to background */}
     </svg>
   )
 }
