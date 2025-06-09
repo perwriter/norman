@@ -36,6 +36,36 @@ const blogPosts = [
     imageUrl: "/norman-lu-hero.jpeg",
     aiHint: "concert hall stage",
     link: "/news/carnegie-hall-review"
+  },
+  {
+    id: "4",
+    slug: "reflections-on-chopin", // Added slug for dynamic routing
+    title: "Reflections on Chopin: A Journey Through Nocturnes",
+    date: "October 15, 2024",
+    excerpt: "Exploring the emotional depth and technical brilliance of Chopin's Nocturnes, and their enduring appeal to pianists and audiences alike.",
+    imageUrl: "/norman-lu-hero.jpeg",
+    aiHint: "piano sheet music",
+    link: "/news/reflections-on-chopin" 
+  },
+  {
+    id: "5",
+    slug: "art-of-practice", // Added slug
+    title: "The Art of Practice: Strategies for Musicians",
+    date: "September 28, 2024",
+    excerpt: "Insights into effective practice techniques, maintaining motivation, and achieving artistic growth as a performing musician.",
+    imageUrl: "/norman-lu-hero.jpeg",
+    aiHint: "musician practicing",
+    link: "/news/art-of-practice"
+  },
+  {
+    id: "6",
+    slug: "carnegie-hall-review", // Added slug
+    title: "Concert Review: An Evening at Carnegie Hall",
+    date: "August 05, 2024",
+    excerpt: "A personal account and review of a recent memorable performance at the legendary Carnegie Hall.",
+    imageUrl: "/norman-lu-hero.jpeg",
+    aiHint: "concert hall stage",
+    link: "/news/carnegie-hall-review"
   }
 ];
 
@@ -58,6 +88,30 @@ const videoPerformances = [
   },
   {
     id: "v3",
+    title: "Interview: Norman Lu on Musical Interpretation",
+    description: "A discussion on artistic choices, historical context, and personal connection to music.",
+    thumbnailUrl: "/norman-lu-hero.jpeg",
+    aiHint: "musician interview setup",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Placeholder
+  },
+  {
+    id: "v4",
+    title: "Norman Lu plays Liszt - La Campanella",
+    description: "Live performance from the International Music Festival, 2023.",
+    thumbnailUrl: "/norman-lu-hero.jpeg",
+    aiHint: "piano concert stage",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Placeholder
+  },
+  {
+    id: "v5",
+    title: "Beethoven Piano Sonata No. 14 'Moonlight'",
+    description: "Studio recording, offering a serene and intimate interpretation.",
+    thumbnailUrl: "/norman-lu-hero.jpeg",
+    aiHint: "grand piano dramatic",
+    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ" // Placeholder
+  },
+  {
+    id: "v6",
     title: "Interview: Norman Lu on Musical Interpretation",
     description: "A discussion on artistic choices, historical context, and personal connection to music.",
     thumbnailUrl: "/norman-lu-hero.jpeg",

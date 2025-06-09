@@ -36,9 +36,7 @@ export default function SiteFooter() {
         <p className="text-sm text-muted-foreground">
           © {new Date().getFullYear()} Norman Lu. All rights reserved.
         </p>
-        <p className="text-xs text-muted-foreground mt-2">
-          Website by Firebase Studio AI
-        </p>
+        
       </div>
     </footer>
   );

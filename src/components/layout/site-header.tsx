@@ -28,7 +28,7 @@ export default function SiteHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50 py-4 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 md:py-2 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 max-w-screen-2xl items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center space-x-2">
@@ -53,7 +53,7 @@ export default function SiteHeader() {
         </nav>
 
         {/* Contact Button (Desktop) */}
-        <div className="hidden md:flex items-center ml-4"> {/* Added ml-4 for spacing */}
+        <div className="hidden md:flex items-center ml-4 ring-1 ring-primary rounded-md"> {/* Added ml-4 for spacing */}
           <Button asChild variant={isActive(contactNavItem.href) ? "default" : "outline"} size="sm">
             <Link href={contactNavItem.href} className="flex items-center">
               <Phone className="mr-2 h-4 w-4" />
@@ -91,7 +91,7 @@ export default function SiteHeader() {
                   </Link>
                 ))}
                 {/* Render contact item last, styled as a button */}
-                 <Button asChild variant={isActive(contactNavItem.href) ? "default" : "outline"} className="w-full mt-4">
+                 <Button asChild variant={isActive(contactNavItem.href) ? "default" : "outline"} className="w-full ring-1 ring-primary rounded-md mt-4">
                     <Link href={contactNavItem.href} className="flex items-center justify-center">
                         <Phone className="mr-2 h-5 w-5" />
                         {contactNavItem.label}

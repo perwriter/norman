@@ -8,6 +8,9 @@ import SiteFooter from '@/components/layout/site-footer';
 export const metadata: Metadata = {
   title: 'Norman Lu - Pianist',
   description: 'The official portfolio website of Norman Lu, showcasing performances, news, and biography.',
+  icons: {
+    icon: "https://us-west-2.graphassets.com/wygkxnzkbr0kxmwk52wnr9qo/cmbpjifh18k3y07lpuhnlnomf",
+  },
 };
 
 export default function RootLayout({
